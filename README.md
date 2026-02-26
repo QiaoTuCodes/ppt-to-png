@@ -2,6 +2,7 @@
 
 <p align="center">
     <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/openclaw/openclaw/main/docs/assets/openclaw-logo-text-dark.png">
         <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/QiaoTuCodes/ppt-to-png/main/assets/ppt-to-png-logo.png">
         <img src="https://raw.githubusercontent.com/QiaoTuCodes/ppt-to-png/main/assets/ppt-to-png-logo.png" alt="PPT to PNG" width="500">
     </picture>
