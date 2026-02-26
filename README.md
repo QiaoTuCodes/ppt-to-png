@@ -1,3 +1,5 @@
+# 📄 PPT to PNG — OpenClaw Skill
+
 <p align="center">
     <picture>
         <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/QiaoTuCodes/ppt-to-png/main/assets/ppt-to-png-logo.png">
@@ -6,10 +8,7 @@
 </p>
 
 <p align="center">
-  <strong>📄 PPT/PPTX to PNG Converter Skill for OpenClaw</strong>
-</p>
-
-<p align="center">
+  <a href="https://github.com/QiaoTuCodes/ppt-to-png/actions"><img src="https://img.shields.io/github/actions/workflow/status/QiaoTuCodes/ppt-to-png?branch=main&style=for-the-badge" alt="CI status"></a>
   <a href="https://github.com/QiaoTuCodes/ppt-to-png/releases"><img src="https://img.shields.io/github/v/release/QiaoTuCodes/ppt-to-png?include_prereleases&style=for-the-badge" alt="GitHub release"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="MIT License"></a>
   <a href="https://github.com/QiaoTuCodes/ppt-to-png/stargazers"><img src="https://img.shields.io/github/stars/QiaoTuCodes/ppt-to-png?style=for-the-badge" alt="Stars"></a>
@@ -27,7 +26,7 @@
 ## 📦 Installation
 
 ```bash
-# Clone this skill to your OpenClaw workspace
+# Clone to OpenClaw workspace
 cp -r ppt-to-png ~/openclaw-workspace/skills/
 
 # Install dependencies
@@ -37,84 +36,38 @@ pip3 install PyMuPDF --break-system-packages
 
 ## 🚀 Quick Start
 
-```python
-import subprocess
-import fitz  # PyMuPDF
-import os
-import zipfile
-
-# Convert PPT to PDF
-subprocess.run([
-    "libreoffice", "--headless", "--convert-to", "pdf",
-    "input.pptx", "--outdir", "output/"
-])
-
-# Convert PDF to PNG
-doc = fitz.open("output.pdf")
-for page_num in range(len(doc)):
-    page = doc[page_num]
-    pix = page.get_pixmap()
-    pix.save(f"output/{page_num + 1}.png")
-```
-
-## CLI Usage
-
 ```bash
-# Basic conversion
-python3 convert.py --input /path/to/file.pptx --output ./output
-
-# With ZIP packaging
 python3 convert.py --input /path/to/file.pptx --output ./output --zip
-
-# Specify output folder
-python3 convert.py -i presentation.pptx -o ./images
 ```
-
-## 📖 Documentation
-
-- [English README](README.md)
-- [中文文档](README-CN.md)
-- [Skill Definition](SKILL.md)
 
 ## 🔧 Requirements
 
 - Python 3.8+
 - LibreOffice (headless mode)
-- PyMuPDF (fitz)
+- PyMuPDF
 
 ## 📂 Project Structure
 
 ```
 ppt-to-png/
-├── SKILL.md           # OpenClaw skill definition
-├── convert.py         # Main Python module
-├── README.md          # English documentation
-├── README-CN.md       # Chinese documentation
-├── LICENSE            # MIT License
-└── .gitignore
+├── SKILL.md
+├── convert.py
+├── README.md
+├── README-CN.md
+└── LICENSE
 ```
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📜 License
 
-MIT License - see [LICENSE](LICENSE) for details.
+MIT License
 
 ## 👥 Authors
 
 - **魏然 (Weiran)** - [GitHub](https://github.com/QiaoTuCodes)
-- **焱焱 (Yanyan)** - yanyan@3c3d77679723a2fe95d3faf9d2c2e5a65559acbc97fef1ef37783514a80ae453
-
-## 🙏 Acknowledgments
-
-- [LibreOffice](https://www.libreoffice.org/) - Open source office suite
-- [PyMuPDF](https://pymupdf.readthedocs.io/) - Python PDF processing
-- [OpenClaw](https://github.com/openclaw/openclaw) team
+- **焱焱 (Yanyan)** - AI Assistant
 
 ---
 
 <p align="center">
-  <sub>Built with ❤️ for the OpenClaw community</sub>
+  <sub>Built with ❤️ for OpenClaw</sub>
 </p>
